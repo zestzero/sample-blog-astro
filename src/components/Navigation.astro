@@ -1,8 +1,12 @@
 ---
+import Link from "./common/Link.astro";
+
+
 ---
-<div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
-    <a href="/tags/">Tags</a>
-  </div>
+
+<div class="flex gap-4">
+  <Link url="/">Home</Link>
+  <Link url="/about">About</Link>
+  <Link url="/blog">Blog</Link>
+  <Link url="/tags/">Tags</Link>
+</div>

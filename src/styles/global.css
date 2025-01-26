@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
-@theme {
-  --font-poppins: Poppins, sans-serif;
-}
+/**
+  * Now instead of dark:* utilities being applied based on prefers-color-scheme,
+  * they will be applied whenever the dark class is present earlier in the HTML tree
+  * https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
+**/
+@custom-variant dark (&:where(.dark, .dark *));
 
 html.dark {
   background-color: #0d0950;
@@ -11,64 +14,4 @@ html.dark {
 
 .dark .nav-links a {
   color: #fff;
-}
-
-/* nav styles */
-.hamburger {
-  padding-right: 20px;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #ff9776;
-}
-
-.nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
-  display: none;
-  margin: 0;
-}
-
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.nav-links a:hover, a:focus {
-  background-color: #ff9776;
-}
-
-.expanded {
-  display: unset;
-}
-
-@media screen and (min-width: 636px) {
-  .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
-  }
-
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
-  }
-
-  .hamburger {
-    display: none;
-  }
 }
