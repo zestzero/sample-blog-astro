@@ -5,6 +5,17 @@ const pageTitle = "Home Page";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
-</BaseLayout>
+  <div class="flex items-end">
+    <span class="text-2xl animate-bounce text-purple-800">My name is&nbsp;</span><h1
+      class="text-5xl"
+    >
+      Krit Bannachaisirisuk
+    </h1>
+  </div>
+  <p class="text-xl mt-4 max-w-lg">
+    This blog is built with Astro and Tailwind CSS. It's a static site generator
+    that's fast, flexible, and easy to use. Following the <a class="underline" href="htthttps://docs.astro.build/en/tutorial/0-introduction/">Astro documentation</a>,
+    I've created a simple blog with a few pages and components. I've also added
+    a few custom styles to make it look nice.
+  </p></BaseLayout
+>

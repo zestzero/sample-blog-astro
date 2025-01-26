@@ -3,9 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About Me";
 
 const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
+  firstName: "Krit Bannachaisirisuk",
+  country: "Bangkok, Thailand",
+  occupation: "Software Engineer",
   hobbies: ["photography", "birdwatching", "baseball"],
 };
 
@@ -49,7 +49,7 @@ const skillColor = "navy";
     }
   </ul>
   <p>My skills are:</p>
-  <ul>
-    {skills.map((skill) => <li>{skill}</li>)}
+  <ul class="flex gap-2">
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
 </BaseLayout>
